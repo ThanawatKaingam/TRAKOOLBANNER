@@ -1,0 +1,40 @@
+﻿<Window x:Name="wn_printer" x:Class="trakoolbanner.Printer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:trakoolbanner"
+        mc:Ignorable="d"
+        Title="Printer" Height="200" Width="300" MinHeight="200" MinWidth="300" MaxHeight="200" MaxWidth="300" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Background="White" Icon="Printer03.png">
+    <Grid Margin="0,0,-0.4,0.4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="281*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+        <Image HorizontalAlignment="Left" Height="20" Margin="51,10,0,0" VerticalAlignment="Top" Width="26" Source="Printer03.png"/>
+        <ComboBox HorizontalAlignment="Left" Height="15
+                  " Margin="93,14,0,0" VerticalAlignment="Top" Width="150" FontFamily="TH Sarabun New">
+            <ListBoxItem Content="Select Printer"/>
+            <ListBoxItem Content="Select Printer"/>
+            <ListBoxItem Content="EPSON L360 Series"/>
+            <ListBoxItem Content="Canon G3010 series (Copy 1)"/>
+            <ListBoxItem Content="Canon G2010 series (Copy 1)"/>
+            <ListBoxItem Content="Canon G2010 series"/>
+        </ComboBox>
+        <CheckBox Content="พิมพ์แบนเนอร์สินค้า" HorizontalAlignment="Left" Height="15" Margin="70,42,0,0" VerticalAlignment="Top" Width="95" FontFamily="TH Sarabun New" FontSize="10" Padding="0" VerticalContentAlignment="Center"/>
+        <CheckBox Content="พิมพ์สตรีมวอลเล็ท" HorizontalAlignment="Left" Height="15" Margin="70,62,0,0" VerticalAlignment="Top" Width="95" FontFamily="TH Sarabun New" FontSize="10" Padding="0" VerticalContentAlignment="Center"/>
+        <Label Content="Vender Editer" HorizontalAlignment="Left" Height="25" Margin="51,90,0,0" VerticalAlignment="Top" Width="83" FontSize="10"/>
+        <ComboBox HorizontalAlignment="Left" Height="15" Margin="134,95,0,0" VerticalAlignment="Top" Width="109" FontFamily="TH Sarabun New">
+            <ListBoxItem Content="ปิดโหมดแก้ไข"/>
+            <ListBoxItem Content="VST"/>
+            <ListBoxItem Content="SIS"/>
+            <ListBoxItem Content="SVOA"/>
+            <ListBoxItem Content="SYNNEX"/>
+            <ListBoxItem Content="WTG"/>
+        </ComboBox>
+        <Button Content="ตกลง" HorizontalAlignment="Left" Height="18" Margin="51,133,0,0" VerticalAlignment="Top" Width="61" FontFamily="TH Sarabun New"/>
+        <Button Content="ยกเลิก" HorizontalAlignment="Left" Height="18" Margin="182,133,0,0" VerticalAlignment="Top" Width="61" FontFamily="TH Sarabun New"/>
+        <Label Content="จำนวนชุดที่พิมพ์" HorizontalAlignment="Left" Height="24" Margin="163,37,0,0" VerticalAlignment="Top" Width="73" FontSize="10" FontFamily="TH Sarabun New" VerticalContentAlignment="Center" Padding="5"/>
+
+    </Grid>
+</Window>
