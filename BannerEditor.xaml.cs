@@ -111,9 +111,12 @@ namespace trakoolbanner
 
                 b.Save("path of the folder to save");
 
+
                 b = new Bitmap(@"C:\Documents and Settings\Desktop\" + txt_main_data14.Text + ".jpg");
 
                 b.Save(@"C:\Extract\" + txt_main_data14.Text + ".jpg");
+
+
             }
             catch (Exception ex)
             {
@@ -124,7 +127,9 @@ namespace trakoolbanner
         //ปุ่มที่อยู่รูป
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+
             txt_main_data13.Text = Directory.GetCurrentDirectory() + "\\Resources\\" + txt_main_data14.Text + ".jpg";
+
         }
 
     }
