@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trakoolbanner"
         mc:Ignorable="d"
-        Title="BannerEditor" Height="450" Width="800" MinHeight="450" MinWidth="800" ResizeMode="CanResizeWithGrip" SizeToContent="WidthAndHeight" ShowInTaskbar="True" WindowStartupLocation="CenterScreen">
+        Title="BannerEditor" Height="450" Width="800" MinHeight="450" MinWidth="800" ResizeMode="CanResizeWithGrip" SizeToContent="WidthAndHeight" ShowInTaskbar="True" WindowStartupLocation="CenterScreen" Icon="icon.ico" Loaded="wn_banner_Loaded">
     <Grid Margin="0,0,-0.4,0">
         <TabControl HorizontalAlignment="Left" Height="197" Margin="399,6,0,0" VerticalAlignment="Top" Width="389">
             <TabItem Header="Create" Margin="-2,0,-1.6,-0.2" FontFamily="TH Sarabun New">
@@ -19,7 +19,7 @@
                     <CheckBox Content="เฉพาะราคา" HorizontalAlignment="Left" Height="14" Margin="55,43,0,0" VerticalAlignment="Top" Width="72"/>
                     <CheckBox Content="ไม่ลดราคา" HorizontalAlignment="Left" Height="14" Margin="127,43,0,0" VerticalAlignment="Top" Width="72" IsChecked="True"/>
                     <Label Content="ราคาขายหน้าเว็บ" HorizontalAlignment="Left" Height="24" Margin="218,37,0,0" VerticalAlignment="Top" Width="89"/>
-                    <TextBox HorizontalAlignment="Left" Height="16" Margin="307,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="76"/>
+                    <TextBox HorizontalAlignment="Left" Height="16" Margin="307,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
                     <Label Content="ภาพสินค้า" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="66" FontSize="11" Margin="8,59,0,0" FontWeight="Bold" FontFamily="TH Sarabun New"/>
                     <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="87" Margin="10,80,0,0"  VerticalAlignment="Top" Width="101"/>
                     <Button Content="จับภาพหน้าจอ" HorizontalAlignment="Left" Height="15" Margin="116,81,0,0" VerticalAlignment="Top" Width="72" FontSize="10"/>
@@ -64,11 +64,11 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Content="บันทึก PNG" HorizontalAlignment="Left" Height="15" Margin="399,239,0,0" VerticalAlignment="Top" Width="72" Background="#FFDCD9D9" FontFamily="TH Sarabun New" FontSize="10"/>
+        <Button Content="บันทึก PNG" HorizontalAlignment="Left" Height="15" Margin="399,239,0,0" VerticalAlignment="Top" Width="72" Background="#FFDCD9D9" FontFamily="TH Sarabun New" FontSize="10" Click="Button_Click"/>
         <Label Content="ราคาขาย" HorizontalAlignment="Left" Height="24" Margin="396,201,0,0" VerticalAlignment="Top" Width="52" FontFamily="TH Sarabun New"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="399,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data11" HorizontalAlignment="Left" Height="15" Margin="399,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85" FontFamily="TH Sarabun New"/>
         <Label Content="ราคาเต็ม&#xD;&#xA;" HorizontalAlignment="Left" Height="24" Margin="496,201,0,0" VerticalAlignment="Top" Width="52" FontFamily="TH Sarabun New"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="500,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data12" HorizontalAlignment="Left" Height="15" Margin="500,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85" FontFamily="TH Sarabun New"/>
         <ComboBox HorizontalAlignment="Left" Height="15" Margin="599,219,0,0" VerticalAlignment="Top" Width="90" FontFamily="TH Sarabun New">
             <ListBoxItem Content="ของแถมชุด 1"/>
             <ListBoxItem Content="RAM 8 GB HyperX"/>
@@ -81,25 +81,25 @@
             <ListBoxItem Content="HDD 1 TB"/>
             <ListBoxItem Content="&lt;reserved&gt;"/>
         </ComboBox>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="476,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data14" HorizontalAlignment="Left" Height="15" Margin="476,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245" FontFamily="TH Sarabun New"/>
         <Button Content="ค้นหา : FTP" HorizontalAlignment="Left" Height="15" Margin="726,239,0,0" VerticalAlignment="Top" Width="62" Background="White" FontFamily="TH Sarabun New"/>
-        <Button Content="โฟลเดอร์ปลายทาง" HorizontalAlignment="Left" Height="15" Margin="399,259,0,0" VerticalAlignment="Top" Width="72" Background="#FFDCD9D9" FontFamily="TH Sarabun New" FontSize="10"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="476,259,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245" FontFamily="TH Sarabun New"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="288" Margin="7,6,0,0" Stroke="Black" VerticalAlignment="Top" Width="384"/>
+        <Button Content="โฟลเดอร์ปลายทาง" HorizontalAlignment="Left" Height="15" Margin="399,259,0,0" VerticalAlignment="Top" Width="72" Background="#FFDCD9D9" FontFamily="TH Sarabun New" FontSize="10" Click="Button_Click_1"/>
+        <TextBox x:Name="txt_main_data13" HorizontalAlignment="Left" Height="15" Margin="476,259,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245" FontFamily="TH Sarabun New"/>
+        <Rectangle x:Name="Show_Image" Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="7,6,0,0" Stroke="Black" Width="384" Height="288" VerticalAlignment="Top"/>
         <Label Content="ชื่อรุ่น" HorizontalAlignment="Left" Height="24" Margin="5,294,0,0" VerticalAlignment="Top" Width="52" FontFamily="TH Sarabun New" FontSize="10"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="7,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="384" FontFamily="TH Sarabun New" />
+        <TextBox x:Name="txt_main_data" HorizontalAlignment="Left" Height="15" Margin="7,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="384" FontFamily="TH Sarabun New" />
         <Label Content="ชื่อรุ่น (Addendum)" HorizontalAlignment="Left" Height="24" Margin="3,325,0,0" VerticalAlignment="Top" Width="96" FontFamily="TH Sarabun New" FontSize="10"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="7,343,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="279" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data1" HorizontalAlignment="Left" Height="15" Margin="7,343,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="279" FontFamily="TH Sarabun New"/>
         <Label Content="OS" HorizontalAlignment="Left" Height="24" Margin="287,326,0,0" VerticalAlignment="Top" Width="52" FontFamily="TH Sarabun New" FontSize="10"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="291,343,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data2" HorizontalAlignment="Left" Height="15" Margin="291,343,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" FontFamily="TH Sarabun New"/>
         <Label Content="CPU" HorizontalAlignment="Left" Height="24" Margin="3,355,0,0" VerticalAlignment="Top" Width="52" FontFamily="TH Sarabun New" FontSize="10"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="7,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data3" HorizontalAlignment="Left" Height="15" Margin="7,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" FontFamily="TH Sarabun New"/>
         <Label Content="RAM" HorizontalAlignment="Left" Height="24" Margin="168,355,0,0" VerticalAlignment="Top" Width="52" FontFamily="TH Sarabun New" FontSize="10"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="172,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data4" HorizontalAlignment="Left" Height="15" Margin="172,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" FontFamily="TH Sarabun New"/>
         <Label Content="Display" HorizontalAlignment="Left" Height="24" Margin="3,382,0,0" VerticalAlignment="Top" Width="52" FontFamily="TH Sarabun New" FontSize="10"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="7,399,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data5" HorizontalAlignment="Left" Height="15" Margin="7,399,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" FontFamily="TH Sarabun New"/>
         <Label Content="HDD" HorizontalAlignment="Left" Height="24" Margin="168,382,0,0" VerticalAlignment="Top" Width="52" FontFamily="TH Sarabun New" FontSize="10"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="172,399,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data6" HorizontalAlignment="Left" Height="15" Margin="172,399,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" FontFamily="TH Sarabun New"/>
         <Rectangle HorizontalAlignment="Left" Height="20" Margin="399,288,0,0"  VerticalAlignment="Top" Width="20
 ">
             <Rectangle.Fill>
@@ -130,14 +130,14 @@
             <ListBoxItem Content="HP"/>
             <ListBoxItem Content="DELL"/>
         </ComboBox>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="332,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="87" FontFamily="TH Sarabun New"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="332,399,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="87" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data7" HorizontalAlignment="Left" Height="15" Margin="332,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="87" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data8" HorizontalAlignment="Left" Height="15" Margin="332,399,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="87" FontFamily="TH Sarabun New"/>
         <Label Content="RAM (Addendum)" HorizontalAlignment="Left" Height="24" Margin="326,355,0,0" VerticalAlignment="Top" Width="93" FontFamily="TH Sarabun New" FontSize="10"/>
         <Label Content="HDD (Addendum)" HorizontalAlignment="Left" Height="24" Margin="326,382,0,0" VerticalAlignment="Top" Width="88" FontFamily="TH Sarabun New" FontSize="10"/>
         <Label Content="VGA" HorizontalAlignment="Left" Height="24" Margin="419,355,0,0" VerticalAlignment="Top" Width="65" FontFamily="TH Sarabun New" FontSize="10"/>
         <Label Content="VGA (Addendum)" HorizontalAlignment="Left" Height="24" Margin="419,382,0,0" VerticalAlignment="Top" Width="88" FontFamily="TH Sarabun New" FontSize="10"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="424,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="141" FontFamily="TH Sarabun New"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="424,399,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="141" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data9" HorizontalAlignment="Left" Height="15" Margin="424,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="141" FontFamily="TH Sarabun New"/>
+        <TextBox x:Name="txt_main_data10" HorizontalAlignment="Left" Height="15" Margin="424,399,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="141" FontFamily="TH Sarabun New"/>
         <CheckBox Content="เช็คเว็บภายนอก" HorizontalAlignment="Left" Height="14" Margin="489,329,0,0" VerticalAlignment="Top" Width="112" FontFamily="TH Sarabun New" FontSize="10"/>
         <CheckBox Content="แสดงราคาหน้าไฟล์ PNG" HorizontalAlignment="Left" Height="14" Margin="489,348,0,0" VerticalAlignment="Top" Width="117" FontFamily="TH Sarabun New" FontSize="10"/>
         <ListView HorizontalAlignment="Left" Height="123" Margin="606,291,0,0" VerticalAlignment="Top" Width="182">
