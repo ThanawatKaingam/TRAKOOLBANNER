@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TRAKOOLBANNER"
         mc:Ignorable="d"
-        Title="Login" Height="280" Width="350" MinWidth="350" MinHeight="280" MaxWidth="350" MaxHeight="280" Loaded="Window_Loaded" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        Title="Login" Height="280" Width="350" MinWidth="350" MinHeight="280" MaxWidth="350" MaxHeight="280" Loaded="Window_Loaded" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="icon.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="13.6"/>

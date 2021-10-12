@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trakoolbanner"
         mc:Ignorable="d"
-        Title="Printer" Height="200" Width="300" MinHeight="200" MinWidth="300" MaxHeight="200" MaxWidth="300" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Background="White" Icon="Printer03.png">
+        Title="Printer" Height="200" Width="300" MinHeight="200" MinWidth="300" MaxHeight="200" MaxWidth="300" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Background="White" Icon="Printer03.png" Loaded="wn_printer_Loaded">
     <Grid Margin="0,0,-0.4,0.4">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="281*"/>

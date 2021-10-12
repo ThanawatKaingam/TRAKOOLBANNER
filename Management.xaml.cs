@@ -14,6 +14,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using trakoolbanner;
+using System.Drawing;
+using System.IO;
+using System.Windows.Interop;
+using Microsoft.Win32;
+using System.Drawing.Imaging;
+using Path = System.IO.Path;
+using System.Drawing.Printing;
+using System.Windows.Xps.Packaging;
+using System.Windows.Xps;
+using System.Windows.Documents.Serialization;
 
 namespace trakoolbanner
 {
@@ -30,6 +40,15 @@ namespace trakoolbanner
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void wn_management_Loaded(object sender, RoutedEventArgs e)
+        {
+            string sql = $"SELECT * FROM member ";
+            MySqlConnection con = new MySqlConnection("host=localhost;user=root;password=;database=testdatabase;");
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandTimeout = 0;
+            con.Open();
         }
     }
 }

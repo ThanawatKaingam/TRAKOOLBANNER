@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trakoolbanner"
         mc:Ignorable="d"
-        Title="Management" Height="450" Width="800" MinHeight="450" MinWidth="800" ResizeMode="CanResizeWithGrip" SizeToContent="WidthAndHeight" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
+        Title="Management" Height="450" Width="800" MinHeight="450" MinWidth="800" ResizeMode="CanResizeWithGrip" SizeToContent="WidthAndHeight" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Icon="Man02.png" Loaded="wn_management_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

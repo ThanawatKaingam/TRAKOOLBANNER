@@ -14,6 +14,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using trakoolbanner;
+using System.Drawing;
+using System.IO;
+using System.Windows.Interop;
+using Microsoft.Win32;
+using System.Drawing.Imaging;
+using Path = System.IO.Path;
+using System.Drawing.Printing;
+using System.Windows.Xps.Packaging;
+using System.Windows.Xps;
+using System.Windows.Documents.Serialization;
 
 namespace TRAKOOLBANNER
 {
